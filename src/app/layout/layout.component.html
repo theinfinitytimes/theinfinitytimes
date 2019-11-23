@@ -1,0 +1,53 @@
+<mat-sidenav-container class="flex-grow-1" autosize="true">
+    <mat-sidenav #sidenav mode="side" role="navigation" [fixedTopGap]="65" [fixedInViewport]="true">
+        <mat-nav-list>
+            <a mat-list-item routerLinkActive="active" [routerLink]="['/foititika']">
+                <span [translate]="'Foititika'" class="font-lg"></span>
+            </a>
+            <a mat-list-item routerLinkActive="active" [routerLink]="['/zodiac']">
+                <span [translate]="'Zodiac'" class="font-lg"></span>
+            </a>
+            <a mat-list-item routerLinkActive="active" [routerLink]="['/tech']">
+                <span [translate]="'ScienceAndTechnology'" class="font-lg"></span>
+            </a>
+            <a mat-list-item routerLink="active" [routerLink]="['/love']">
+                <span [translate]="'Love'" class="font-lg"></span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary" class="fixed-header d-flex">
+            <mat-toolbar-row class="fixed-header">
+                <button mat-icon-button (click)="sidenav.toggle()" fxHide.gt-sm>
+                    <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+                    <mat-icon *ngIf="sidenav.opened">clear</mat-icon>
+                </button>
+                <div [routerLink]="'/'">
+                    <img src="assets/logo.svg" alt="theinfinitytimes.com" width="40" height="30" align="top">
+                    <button mat-button disableRipple class="btn btn-outline-none">
+                        <span class="font-xl">theinfinitytimes.com</span>
+                    </button>
+                </div>
+                <span class="menu-space"></span>
+                <div fxShow="true" fxHide.lt-md>
+                    <a routerLinkActive="active" [routerLink]="['/foititika']" mat-button>
+                        <span [translate]="'Foititika'" class="font-lg"></span>
+                    </a>
+                    <a routerLinkActive="active" [routerLink]="['/zodiac']" mat-button>
+                        <span [translate]="'Zodiac'" class="font-lg"></span>
+                    </a>
+                    <a routerLinkActive="active" [routerLink]="['/tech']" mat-button>
+                        <span [translate]="'ScienceAndTechnology'" class="font-lg"></span>
+                    </a>
+                    <a routerLink="active" [routerLink]="['/love']" mat-button>
+                        <span [translate]="'Love'" class="font-lg"></span>
+                    </a>
+                </div>
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
