@@ -1,27 +1,62 @@
-# TheinfinitytimesFrontend
+# theinfinitytimes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.1.
+This is the front-end module of the website theinfinitytimes.com . Our main goal with the website
+is to inform and entertain young people, and not only. We decided to use the latest technologies
+to build a responsive website and design a good user experience. 
 
-## Development server
+## Getting Started 
+These instructions will get you a copy of the project up and running on your local machine 
+for development and testing purposes.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Prerequisites
 
-## Code scaffolding
+1. Git
+2. Nodejs
+3. Angular CLI
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Instructions
 
-## Build
+First clone the repository: 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+`git clone https://gitlab.com/theinfinitytimes/theinfinitytimes.git `
 
-## Running unit tests
+Go to the repository's directory: 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`cd theinfinitytimes`
 
-## Running end-to-end tests
+Install dependencies:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+`npm install`
 
-## Further help
+Run application (this will run on port 4200 by default): 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+`ng serve` 
+
+### Running the tests
+
+We have broken down the tests to unit tests and e2e tests. We are using Jasmine and Karma 
+to run our tests. 
+
+To run our unit tests: 
+
+`npm run test`
+
+To run our e2e tests: 
+
+`npm run e2e`
+
+### Built with
+
+1. Angular CLI 8
+2. themost
+3. Angular Material
+4. Ionic
+5. Bootstrap
+
+
+### Contributing
+Please read <a href="https://gitlab.com/theinfinitytimes/theinfinitytimes/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> 
+for details on our code of conduct, and the process for submitting merge requests to us.
+
+### License
+This project is licensed under the MIT License - see the <a href="https://gitlab.com/theinfinitytimes/theinfinitytimes/blob/master/LICENSE">LICENSE.md</a> file for details
