@@ -1,0 +1,38 @@
+image: node:latest
+
+stages:
+  - install-deps
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+before_build:
+  stage: install-deps
+  script:
+    - npm install --quiet
+    - npm rebuild node-sass
+
+build:
+  stage: build
+  artifacts:
+    paths:
+      - dist/theinfinitytimes-frontend
+  script:
+    - npm install -g @angular/cli
+    - npm run build
+  dependencies:
+    - before_build
+
+pages:
+  stage: deploy
+  script:
+    - mv dist/theinfinitytimes-frontend/* public/
+  artifacts:
+    paths:
+      - public
+  only:
+    refs:
+      - master@theinfinitytimes/theinfinitytimes
