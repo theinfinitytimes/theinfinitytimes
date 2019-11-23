@@ -1,0 +1,51 @@
+mat-toolbar {
+  top: 0;
+  width: 100%;
+  padding: 0;
+  box-shadow: 0 0 17px 0 rgb(0, 0, 0);
+  height: 50px;
+}
+
+.fixed-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  height: 64px;
+  opacity: 85%;
+}
+
+// Buttons
+button.btn {
+  outline: 0;
+
+  :focus {
+    cursor: pointer;
+    background: #292929;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu-space{
+  flex: 1 1 auto;
+}
+mat-sidenav-container,
+mat-sidenav-content,
+mat-sidenav {
+  height: 100%;
+}
+mat-sidenav{
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  width: 200px;
+}
+
+main {
+  margin-top: 80px;
+  padding: 10px;
+}
