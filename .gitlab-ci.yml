@@ -19,7 +19,7 @@ build:
   stage: build
   artifacts:
     paths:
-      - dist/theinfinitytimes-frontend
+      - dist/theinfinitytimes
   script:
     - npm install -g @angular/cli
     - npm run build
@@ -30,7 +30,7 @@ pages:
   stage: deploy
   script:
     - mkdir public
-    - mv dist/theinfinitytimes-frontend/* public/
+    - mv dist/theinfinitytimes/* public/
   artifacts:
     paths:
       - public
