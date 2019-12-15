@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "theinfinitytimes-frontend": {
+    "theinfinitytimes": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/theinfinitytimes-frontend",
+            "outputPath": "dist/theinfinitytimes",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "theinfinitytimes-frontend:build"
+            "browserTarget": "theinfinitytimes:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "theinfinitytimes-frontend:build:production"
+              "browserTarget": "theinfinitytimes:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "theinfinitytimes-frontend:build"
+            "browserTarget": "theinfinitytimes:build"
           }
         },
         "test": {
@@ -117,15 +117,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "theinfinitytimes-frontend:serve"
+            "devServerTarget": "theinfinitytimes:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "theinfinitytimes-frontend:serve:production"
+              "devServerTarget": "theinfinitytimes:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "theinfinitytimes-frontend"
+  "defaultProject": "theinfinitytimes"
 }

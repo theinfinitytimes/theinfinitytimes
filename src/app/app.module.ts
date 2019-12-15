@@ -16,7 +16,6 @@ import {
     MatToolbarModule
 } from '@angular/material';
 import {HomeModule} from './home/home.module';
-import {MostModule} from '@themost/angular';
 import {TranslateModule, TranslateService} from '@ngx-translate/core';
 import {environment} from '../environments/environment';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -39,13 +38,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
         MatSidenavModule,
         MatToolbarModule,
         FlexLayoutModule,
-        MostModule.forRoot({
-            base: '/',
-            options: {
-                useMediaTypeExtensions: false,
-                useResponseConversion: true
-            }
-        }),
         TranslateModule.forRoot()
     ],
     exports: [

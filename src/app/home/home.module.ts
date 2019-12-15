@@ -1,7 +1,6 @@
 import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {HomeComponent} from './home.component';
-import {MostModule} from '@themost/angular';
 import {environment} from '../../environments/environment';
 import {TranslateModule, TranslateService} from '@ngx-translate/core';
 import {HomeRoutingModule} from './home-routing.module';
@@ -11,7 +10,6 @@ import {MatCardModule} from '@angular/material';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MostModule,
     TranslateModule,
     MatCardModule
   ],
