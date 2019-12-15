@@ -1,5 +1,8 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
+const puppeteer = require('puppeteer');
+process.env.CHROME_BIN = puppeteer.executablePath();
+process.env.CHROMIUM_BIN = puppeteer.executablePath();
 
 module.exports = function (config) {
   config.set({
@@ -25,8 +28,24 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: ['ChromeHeadlessNoSandbox'],
     singleRun: false,
-    restartOnFileChange: true
+    restartOnFileChange: true,
+    captureTimeout: 100000,
+    browserDisconnectTolerance: 3,
+    browserDisconnectTimeout : 100000,
+    browserNoActivityTimeout : 100000,
+    customLaunchers: {
+      ChromeHeadlessNoSandbox: {
+        base: 'ChromeHeadless',
+        flags: [
+          '--no-sandbox',
+          '--enable-logging=stderr',
+          '--disable-web-security',
+          '--disable-gpu',
+          '--no-proxy-server'
+        ]
+      }
+    }
   });
 };
