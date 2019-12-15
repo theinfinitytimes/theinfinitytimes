@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'theinfinitytimes-frontend'`, () => {
+  it(`should have as title 'theinfinitytimes'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('theinfinitytimes-frontend');
+    expect(app.title).toEqual('theinfinitytimes');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('theinfinitytimes-frontend app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('theinfinitytimes app is running!');
   });
 });
