@@ -1,10 +1,11 @@
 import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {HomeComponent} from './home.component';
+import {HomeComponent} from './components/home.component';
 import {environment} from '../../environments/environment';
 import {TranslateModule, TranslateService} from '@ngx-translate/core';
 import {HomeRoutingModule} from './home-routing.module';
 import {MatCardModule} from '@angular/material';
+import {PostsService} from '../services/posts.service';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import {MatCardModule} from '@angular/material';
         HomeComponent
     ],
     providers: [
-        TranslateService
+        TranslateService,
+        PostsService
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
