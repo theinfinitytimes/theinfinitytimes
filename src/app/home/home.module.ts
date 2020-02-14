@@ -6,13 +6,16 @@ import {TranslateModule, TranslateService} from '@ngx-translate/core';
 import {HomeRoutingModule} from './home-routing.module';
 import {MatCardModule} from '@angular/material';
 import {PostsService} from '../services/posts.service';
+import {SharedModule} from '../services/shared.module';
+import {InfinityComponent} from '../services/loading.component';
 
 @NgModule({
   imports: [
     CommonModule,
     HomeRoutingModule,
     TranslateModule,
-    MatCardModule
+    MatCardModule,
+    SharedModule
   ],
     declarations: [
         HomeComponent
@@ -21,7 +24,8 @@ import {PostsService} from '../services/posts.service';
         TranslateService,
         PostsService
     ],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    entryComponents: [InfinityComponent]
 })
 export class HomeModule {
     constructor(private translateService: TranslateService) {

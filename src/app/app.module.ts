@@ -24,6 +24,7 @@ import {ApolloModule, Apollo, APOLLO_OPTIONS} from 'apollo-angular';
 import {HttpLink, HttpLinkModule} from 'apollo-angular-link-http';
 import {InMemoryCache} from 'apollo-cache-inmemory';
 import {PostsService} from './services/posts.service';
+import {SharedModule} from './services/shared.module';
 
 @NgModule({
     declarations: [
@@ -46,7 +47,10 @@ import {PostsService} from './services/posts.service';
         MatSidenavModule,
         MatToolbarModule,
         FlexLayoutModule,
+        SharedModule,
         TranslateModule.forRoot()
+    ],
+    entryComponents: [
     ],
     exports: [
         MatButtonModule,
@@ -55,7 +59,7 @@ import {PostsService} from './services/posts.service';
         MatMenuModule,
         MatSidenavModule,
         MatToolbarModule,
-        FlexLayoutModule,
+        FlexLayoutModule
     ],
     providers: [
         TranslateService,
