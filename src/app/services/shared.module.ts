@@ -25,7 +25,7 @@ import {LoadingService} from './loading.service';
 export class SharedModule {
     constructor() {
     }
-    static forRoot(): ModuleWithProviders {
+    static forRoot(): ModuleWithProviders<SharedModule> {
         return {
             ngModule: SharedModule,
             providers: [

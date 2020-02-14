@@ -47,7 +47,7 @@ To run our e2e tests:
 
 ### Built with
 
-1. Angular CLI 8
+1. Angular CLI 9
 3. Angular Material
 4. Ionic
 5. Bootstrap

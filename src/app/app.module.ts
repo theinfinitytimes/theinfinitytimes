@@ -6,15 +6,12 @@ import {AppComponent} from './app.component';
 import {LayoutComponent} from './layout/layout.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
-import {
-    MatButtonModule,
-    MatIconModule,
-    MatListModule,
-    MatMenuModule,
-    MatSidenavContainer,
-    MatSidenavModule,
-    MatToolbarModule
-} from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule} from '@angular/material/menu';
+import { MatSidenavContainer, MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import {HomeModule} from './home/home.module';
 import {TranslateModule, TranslateService} from '@ngx-translate/core';
 import {environment} from '../environments/environment';
