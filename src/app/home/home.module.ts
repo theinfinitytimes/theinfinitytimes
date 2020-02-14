@@ -4,7 +4,7 @@ import {HomeComponent} from './components/home.component';
 import {environment} from '../../environments/environment';
 import {TranslateModule, TranslateService} from '@ngx-translate/core';
 import {HomeRoutingModule} from './home-routing.module';
-import {MatCardModule} from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
 import {PostsService} from '../services/posts.service';
 import {SharedModule} from '../services/shared.module';
 import {InfinityComponent} from '../services/loading.component';
