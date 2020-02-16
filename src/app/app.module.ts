@@ -78,6 +78,7 @@ import {SharedModule} from './services/shared.module';
 })
 export class AppModule {
     constructor(private translateService: TranslateService, private apollo: Apollo, private httpLink: HttpLink) {
+        this.translateService.currentLang = environment.languages[0];
         environment.languages.forEach((culture) => {
             import(`./i18n/${culture}.json`).then((translations) => {
                 this.translateService.setTranslation(culture, translations, true);

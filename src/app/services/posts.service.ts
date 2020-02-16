@@ -32,6 +32,7 @@ export class PostsService {
                         body
                         author
                         dateCreated
+                        picture
                     }
                 }
             `,
@@ -74,11 +75,12 @@ export class PostsService {
     getUser(idOfUser: string) {
         return this.apollo.query({
             query: gql`
-                query ($id: String) {
+                query ($id: String!) {
                     findUserById(_id: $id){
                         familyName
                         givenName
                         nickname
+                        profilePicture
                     }
                 }
             `,
