@@ -24,7 +24,6 @@ export class LoadingService {
     public hideLoading() {
         if (!!this.overlayRef) {
             this.overlayRef.detach();
-            this.overlayRef.dispose();
         }
     }
     public toggle() {

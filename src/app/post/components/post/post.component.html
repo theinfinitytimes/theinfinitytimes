@@ -1,0 +1,33 @@
+<div *ngIf="!isLoading">
+    <div class="post-wrapper">
+        <mat-card>
+            <div *ngIf="post.picture && post.picture.length">
+                <img alt="{{post.title}}" src="{{post.picture[0]}}">
+            </div>
+            <mat-card-title class="my-2 py-2 mx-2">
+                <div class="font-2xl font-weight-bold">{{post.title}}</div>
+                <div class="text-light font-weight-light font-sm font-italic">{{post.author.nickname}}</div>
+            </mat-card-title>
+            <mat-card-content class="mx-2 px-2">
+                <div class="text-light">{{post.body}}</div>
+            </mat-card-content>
+            <mat-card class="mt-2">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="profile-picture">
+                            <img class="rounded" src="{{post.author.profilePicture}}" alt="{{post.author.nickname}}">
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="row">
+                            <div class="font-xl font-italic font-weight-bold">{{'Post.AboutTheAuthor' | translate}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="font-sm mr-3">{{post.author.description}}</div>
+                        </div>
+                    </div>
+                </div>
+            </mat-card>
+        </mat-card>
+    </div>
+</div>

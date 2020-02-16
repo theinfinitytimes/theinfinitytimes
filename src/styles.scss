@@ -52,7 +52,7 @@ $mat-light-theme-foreground: (
 );
 
 // Dark Theme text
-$light-text: #ffffff;
+$light-text: #f2f2f2;
 $light-primary-text: $light-text;
 $light-accent-text: rgba($light-primary-text, 0.7);
 $light-disabled-text: rgba($light-primary-text, 0.5);
@@ -299,5 +299,13 @@ html, body, app-root {
   app-loader {
     width: 6rem;
     height: 6rem;
+  }
+}
+
+a {
+  color: #0288D1;
+  :hover, :focus, :visited {
+    color: #0288D1;
+    text-decoration: none;
   }
 }
