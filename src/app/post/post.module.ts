@@ -31,6 +31,5 @@ export class PostModule {
                 this.translateService.setTranslation(culture, translations, true);
             });
         });
-        console.log(this.translateService.currentLang);
     }
 }
