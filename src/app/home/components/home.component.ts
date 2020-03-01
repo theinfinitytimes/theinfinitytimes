@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {PostsService} from '../../services/posts.service';
-import {LoadingService} from '../../services/loading.service';
+import {PostsService} from '../../shared/services/posts.service';
+import {LoadingService} from '../../shared/services/loading.service';
 
 @Component({
     selector: 'app-home',

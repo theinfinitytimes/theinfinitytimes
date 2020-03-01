@@ -5,9 +5,9 @@ import {environment} from '../../environments/environment';
 import {TranslateModule, TranslateService} from '@ngx-translate/core';
 import {HomeRoutingModule} from './home-routing.module';
 import { MatCardModule } from '@angular/material/card';
-import {PostsService} from '../services/posts.service';
-import {SharedModule} from '../services/shared.module';
-import {InfinityComponent} from '../services/loading.component';
+import {PostsService} from '../shared/services/posts.service';
+import {SharedModule} from '../shared/shared.module';
+import {InfinityComponent} from '../shared/services/loading.component';
 
 @NgModule({
   imports: [

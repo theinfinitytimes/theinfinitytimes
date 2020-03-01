@@ -20,8 +20,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {ApolloModule, Apollo, APOLLO_OPTIONS} from 'apollo-angular';
 import {HttpLink, HttpLinkModule} from 'apollo-angular-link-http';
 import {InMemoryCache} from 'apollo-cache-inmemory';
-import {PostsService} from './services/posts.service';
-import {SharedModule} from './services/shared.module';
+import {PostsService} from './shared/services/posts.service';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
     declarations: [
