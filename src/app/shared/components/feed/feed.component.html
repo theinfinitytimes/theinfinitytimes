@@ -13,6 +13,8 @@
 </div>
 <div *ngIf="posts && posts.length === 0">
     <mat-card class="mx-5 mt-5">
-        <mat-card-content [translate]="'NoPostsFound'"></mat-card-content>
+        <mat-card-content>
+            <div class="font-weight-bold text-center" [translate]="'NoPostsFound'"></div>
+        </mat-card-content>
     </mat-card>
 </div>

@@ -6,8 +6,7 @@ import { FeedComponent } from './components/feed/feed.component';
 import {RouterModule} from '@angular/router';
 import {MatCardModule} from '@angular/material/card';
 import {CommonModule} from '@angular/common';
-
-
+import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
     declarations: [
@@ -18,7 +17,8 @@ import {CommonModule} from '@angular/common';
         CommonModule,
         HttpClientModule,
         RouterModule,
-        MatCardModule
+        MatCardModule,
+        TranslateModule
     ],
     entryComponents: [
         InfinityComponent

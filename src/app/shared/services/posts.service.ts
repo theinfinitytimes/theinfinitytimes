@@ -89,4 +89,23 @@ export class PostsService {
             }
         });
     }
+
+    getPostsByTag(idOfTag: number) {
+        return this.apollo.query({
+            query: gql`
+                query($tag: Int!) {
+                    postsByTag(tag: $tag){
+                        id
+                        title
+                        body
+                        author
+                        dateCreated
+                    }
+                }
+            `,
+            variables: {
+                tag: idOfTag
+            }
+        });
+    }
 }

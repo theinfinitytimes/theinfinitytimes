@@ -1,16 +1,16 @@
 <mat-sidenav-container class="flex-grow-1" autosize="true">
     <mat-sidenav #sidenav mode="side" role="navigation" [fixedTopGap]="65" [fixedInViewport]="true">
         <mat-nav-list>
-            <a mat-list-item routerLinkActive="active" [routerLink]="['/foititika']">
+            <a mat-list-item routerLinkActive="active" [routerLink]="['/categories/foititika']">
                 <span [translate]="'Foititika'" class="font-lg"></span>
             </a>
-            <a mat-list-item routerLinkActive="active" [routerLink]="['/zodiac']">
+            <a mat-list-item routerLinkActive="active" [routerLink]="['/categories/zodiac']">
                 <span [translate]="'Zodiac'" class="font-lg"></span>
             </a>
-            <a mat-list-item routerLinkActive="active" [routerLink]="['/tech']">
+            <a mat-list-item routerLinkActive="active" [routerLink]="['/categories/scitech']">
                 <span [translate]="'ScienceAndTechnology'" class="font-lg"></span>
             </a>
-            <a mat-list-item routerLink="active" [routerLink]="['/love']">
+            <a mat-list-item routerLink="active" [routerLink]="['/categories/relationships']">
                 <span [translate]="'Love'" class="font-lg"></span>
             </a>
         </mat-nav-list>
@@ -30,16 +30,16 @@
                 </div>
                 <span class="menu-space"></span>
                 <div fxShow="true" fxHide.lt-md>
-                    <a routerLinkActive="active" [routerLink]="['/foititika']" mat-button>
+                    <a routerLinkActive="active" [routerLink]="['/categories/foititika']" mat-button>
                         <span [translate]="'Foititika'" class="font-lg"></span>
                     </a>
-                    <a routerLinkActive="active" [routerLink]="['/zodiac']" mat-button>
+                    <a routerLinkActive="active" [routerLink]="['/categories/zodiac']" mat-button>
                         <span [translate]="'Zodiac'" class="font-lg"></span>
                     </a>
-                    <a routerLinkActive="active" [routerLink]="['/tech']" mat-button>
+                    <a routerLinkActive="active" [routerLink]="['/categories/scitech']" mat-button>
                         <span [translate]="'ScienceAndTechnology'" class="font-lg"></span>
                     </a>
-                    <a routerLink="active" [routerLink]="['/love']" mat-button>
+                    <a routerLink="active" [routerLink]="['/categories/relationships']" mat-button>
                         <span [translate]="'Love'" class="font-lg"></span>
                     </a>
                 </div>
