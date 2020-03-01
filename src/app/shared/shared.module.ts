@@ -1,21 +1,31 @@
 import {CUSTOM_ELEMENTS_SCHEMA, ModuleWithProviders, NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
-import {InfinityComponent} from './loading.component';
-import {LoadingService} from './loading.service';
+import {InfinityComponent} from './services/loading.component';
+import {LoadingService} from './services/loading.service';
+import { FeedComponent } from './components/feed/feed.component';
+import {RouterModule} from '@angular/router';
+import {MatCardModule} from '@angular/material/card';
+import {CommonModule} from '@angular/common';
+
 
 
 @NgModule({
     declarations: [
-        InfinityComponent
+        InfinityComponent,
+        FeedComponent
     ],
     imports: [
+        CommonModule,
         HttpClientModule,
-        ],
+        RouterModule,
+        MatCardModule
+    ],
     entryComponents: [
         InfinityComponent
     ],
     exports: [
-        InfinityComponent
+        InfinityComponent,
+        FeedComponent
     ],
     providers: [
         LoadingService
