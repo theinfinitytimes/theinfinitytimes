@@ -15,7 +15,17 @@ export class PostsService {
                         id
                         title
                         body
-                        author
+                        author {
+                            description
+                            account {
+                                user {
+                                    familyName
+                                    givenName
+                                    nickname
+                                    profilePicture
+                                }
+                            }
+                        }
                         dateCreated
                     }
                 }
@@ -30,7 +40,17 @@ export class PostsService {
                         id
                         title
                         body
-                        author
+                        author{
+                            description
+                            account {
+                                user {
+                                    familyName
+                                    givenName
+                                    nickname
+                                    profilePicture
+                                }
+                            }
+                        }
                         dateCreated
                         picture
                     }
