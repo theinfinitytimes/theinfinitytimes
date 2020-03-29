@@ -15,7 +15,17 @@ export class PostsService {
                         id
                         title
                         body
-                        author
+                        author {
+                            description
+                            account {
+                                user {
+                                    familyName
+                                    givenName
+                                    nickname
+                                    profilePicture
+                                }
+                            }
+                        }
                         dateCreated
                     }
                 }
@@ -30,7 +40,17 @@ export class PostsService {
                         id
                         title
                         body
-                        author
+                        author{
+                            description
+                            account {
+                                user {
+                                    familyName
+                                    givenName
+                                    nickname
+                                    profilePicture
+                                }
+                            }
+                        }
                         dateCreated
                         picture
                     }
@@ -47,7 +67,17 @@ export class PostsService {
             query: gql`
                 query($id: String!) {
                     author(_id: $id){
-                        account
+                        account {
+                            description
+                            account {
+                                user {
+                                    familyName
+                                    givenName
+                                    nickname
+                                    profilePicture
+                                }
+                            }
+                        }
                         description
                     }
                 }
@@ -63,7 +93,15 @@ export class PostsService {
             query: gql`
                 query ($id: String){
                     findAccountById(_id: $id){
-                        user
+                        description
+                        account {
+                            user {
+                                familyName
+                                givenName
+                                nickname
+                                profilePicture
+                            }
+                        }
                     }
                 }
             `, variables: {
@@ -98,7 +136,17 @@ export class PostsService {
                         id
                         title
                         body
-                        author
+                        author {
+                            description
+                            account {
+                                user {
+                                    familyName
+                                    givenName
+                                    nickname
+                                    profilePicture
+                                }
+                            }
+                        }
                         dateCreated
                     }
                 }

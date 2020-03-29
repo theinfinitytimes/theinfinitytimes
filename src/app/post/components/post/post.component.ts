@@ -28,14 +28,6 @@ export class PostComponent implements OnInit, OnDestroy {
                 // tslint:disable-next-line:radix
                 const reqPost = await this.postsService.getPost(Number(params.id)).toPromise();
                 this.post = reqPost.data['post'];
-                if (typeof this.post.author === 'string') {
-                    let obj = await this.postsService.getAuthor(this.post.author).toPromise();
-                    this.post.author = {...this.post.author, ...obj.data['author']};
-                    obj = await this.postsService.getAccount(this.post.author.account).toPromise();
-                    this.post.author = {...this.post.author, ...obj.data['findAccountById']};
-                    obj = await this.postsService.getUser(this.post.author.user).toPromise();
-                    this.post.author = {...this.post.author, ...obj.data['findUserById']};
-                }
             } catch (err) {
                 console.log(err);
                 this.loadingService.hideLoading();
