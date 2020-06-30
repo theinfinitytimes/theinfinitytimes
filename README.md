@@ -45,6 +45,46 @@ To run our e2e tests:
 
 `npm run e2e`
 
+### Run inside a container
+
+We are also providing a Dockerfile that you can build using either Docker or Podman that will
+get you an up and running development container for the front end. 
+
+##### Docker
+```bash
+// this creates the container image
+docker build --tag theinfinitytimes .
+// this creates a container from the image `theinfinitytimes`, names it `theinfinitytimes` 
+// and binds the port 4200 from the container to the port on the host machine 
+docker run -d -p 4200:4200 --name theinfinitytimes --net=host theinfinitytimes
+```
+To stop the container, run 
+```bash
+docker stop theinfinitytimes
+```
+To start it again, run 
+```bash
+podman start theinfinitytimes
+```
+
+
+##### Podman
+```bash
+// this creates the container image
+podman build --tag theinfinitytimes -f ./Dockerfile
+// this creates a container from the image `theinfinitytimes`, names it `theinfinitytimes` 
+// and binds the port 4200 from the container to the port on the host machine 
+podman run -p 4200:4200 --name theinfinitytimes theinfinitytimes 
+```
+To stop the container, run 
+```bash
+podman container stop theinfinitytimes
+```
+To start it again, run 
+```bash
+podman container start theinfinitytimes
+```
+
 ### Built with
 
 1. Angular CLI 9
