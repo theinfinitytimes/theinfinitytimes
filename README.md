@@ -60,11 +60,11 @@ docker run -d -p 4200:4200 --name theinfinitytimes --net=host theinfinitytimes
 ```
 To stop the container, run 
 ```bash
-docker stop theinfinitytimes
+docker container stop theinfinitytimes
 ```
 To start it again, run 
 ```bash
-podman start theinfinitytimes
+docker container start theinfinitytimes
 ```
 
 
