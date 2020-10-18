@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:prod": "node bin/server.js",
     "build": "ng build --prod",
     "test": "ng test --karma-config karma.conf.js --no-watch --no-progress --browsers=ChromeHeadlessNoSandbox",
     "lint": "ng lint",
