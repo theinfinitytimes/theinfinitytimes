@@ -1,3 +1,6 @@
+import {Apollo, APOLLO_OPTIONS} from 'apollo-angular';
+import {HttpLink} from 'apollo-angular/http';
+import {InMemoryCache} from '@apollo/client/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 
@@ -17,9 +20,6 @@ import {TranslateModule, TranslateService} from '@ngx-translate/core';
 import {environment} from '../environments/environment';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
-import {ApolloModule, Apollo, APOLLO_OPTIONS} from 'apollo-angular';
-import {HttpLink, HttpLinkModule} from 'apollo-angular-link-http';
-import {InMemoryCache} from 'apollo-cache-inmemory';
 import {PostsService} from './shared/services/posts.service';
 import {SharedModule} from './shared/shared.module';
 
@@ -29,14 +29,12 @@ import {SharedModule} from './shared/shared.module';
         LayoutComponent
     ],
     imports: [
-        ApolloModule,
         AppRoutingModule,
         BrowserModule,
         BrowserAnimationsModule,
         FlexLayoutModule,
         HomeModule,
         HttpClientModule,
-        HttpLinkModule,
         MatButtonModule,
         MatIconModule,
         MatListModule,
